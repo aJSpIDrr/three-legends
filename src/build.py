@@ -162,20 +162,6 @@ home = head("Three Legends", "Three Legends: three brothers making browser RPGs.
     </div>
   </section>
 
-  <section class="band" id="studio-art" aria-labelledby="art-title">
-    <div class="wrap">
-      <div class="head">
-        <p class="eyebrow">From the studio</p>
-        <h2 id="art-title">Three Legends art</h2>
-      </div>
-      <div class="artrow">
-        <button type="button" data-full="assets/art/three-legends-epic-fantasy-journey.png" data-cap="Three Legends: Epic Fantasy Journey"><img src="assets/art/three-legends-epic-fantasy-journey.png" alt="Three Legends: Epic Fantasy Journey" loading="lazy"></button>
-        <button type="button" data-full="assets/art/three-legends-realm-of-heroes.png" data-cap="Three Legends: Realm of Heroes"><img src="assets/art/three-legends-realm-of-heroes.png" alt="Three Legends: Realm of Heroes" loading="lazy"></button>
-        <button type="button" data-full="assets/art/three-legends-fantasy-crest.png" data-cap="Three Legends Fantasy Crest"><img src="assets/art/three-legends-fantasy-crest.png" alt="Three Legends Fantasy Crest" loading="lazy"></button>
-      </div>
-    </div>
-  </section>
-
   <section class="band" id="contact" aria-labelledby="contact-title">
     <div class="wrap split">
       <div class="stack">
