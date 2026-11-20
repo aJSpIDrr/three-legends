@@ -75,6 +75,7 @@ FOOTER = f'''<footer>
   </div>
 </footer>
 <script src="assets/site.js"></script>
+<script src="assets/store.js"></script>
 </body>
 </html>
 '''
@@ -242,6 +243,14 @@ dust = head("Dustborn · Three Legends", "Dustborn: a post-apocalyptic online RP
     </div>
   </section>
 
+  <section class="band store" id="store" aria-labelledby="db-store">
+    <div class="wrap" data-store="dustborn">
+      <div class="head"><p class="eyebrow">Store</p><h2 id="db-store">Get scrip</h2><p class="muted">Scrip packs you can buy in the game. Optional: everything in Dustborn can also be earned by playing.</p><p class="store-status" role="status"></p></div>
+      <div class="store-grid"></div>
+      <p class="store-note muted"></p>
+    </div>
+  </section>
+
   <section class="band" id="screens" aria-labelledby="db-shots">
     <div class="wrap">
       <div class="head"><p class="eyebrow">In-game</p><h2 id="db-shots">Screenshots</h2><p class="muted">Taken from the current playtest build. Tap a screen to see it larger.</p></div>
@@ -391,6 +400,14 @@ da = head("Dark Alliance · Three Legends", "Dark Alliance: a dark fantasy onlin
       <div class="stack" style="margin-top:28px"><h3 class="eyebrow">Attack abilities: choose two before every fight</h3>
         <ul class="chips"><li>Bloodlust</li><li>Plunder</li><li>Hex</li><li>Ward</li><li>Ruin <span>· level 20</span></li><li>Leech <span>· level 25</span></li><li>Retribution <span>· level 30</span></li></ul>
       </div>
+    </div>
+  </section>
+
+  <section class="band store" id="store" aria-labelledby="da-store">
+    <div class="wrap" data-store="dark-alliance">
+      <div class="head"><p class="eyebrow">Store</p><h2 id="da-store">The Store</h2><p class="muted">Soul shards, gold and perks you can buy in the game. Optional: you can play the whole game for free.</p><p class="store-status" role="status"></p></div>
+      <div class="store-grid"></div>
+      <p class="store-note muted"></p>
     </div>
   </section>
 

@@ -296,3 +296,24 @@ footer img { height: 44px; width: auto; }
 .btn.play-btn { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent); }
 .btn.play-btn.dark { background: var(--ink); color: var(--bone); border-color: var(--ink); }
 .playnote { font-size: .95rem; color: color-mix(in srgb, var(--bone) 78%, transparent); text-shadow: 0 1px 3px rgba(0,0,0,.8); }
+
+/* ---------- Store ---------- */
+.store-status { font: 500 .78rem/1.3 var(--f-mono); letter-spacing: .06em; color: var(--mute); min-height: 1.3em; display: flex; align-items: center; gap: 8px; }
+.store-status.on::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #3ecf6e; box-shadow: 0 0 8px #3ecf6e; }
+.store-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.sitem { display: grid; grid-template-rows: auto 1fr; background: var(--ink-2); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; min-width: 0; }
+body.dustborn .sitem { border-radius: 14px; }
+.sitem-art { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: radial-gradient(ellipse at center, var(--ink-3), var(--ink) 75%); }
+.sitem-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+body.da .sitem-art img { object-fit: cover; object-position: center 30%; padding: 0; }
+.stag { position: absolute; top: 10px; left: 10px; padding: 3px 10px; border-radius: 999px; background: var(--accent); color: var(--on-accent); font: 700 .72rem/1.4 var(--f-body); letter-spacing: .04em; text-transform: uppercase; }
+.sitem-body { display: grid; grid-template-rows: auto auto 1fr auto; gap: 6px; padding: 14px 16px 16px; }
+.sitem h3 { font-family: var(--f-display); font-size: 1.5rem; font-weight: 400; letter-spacing: .02em; }
+body.da .sitem h3 { font-weight: 800; }
+.swhat { font-weight: 700; color: var(--accent-2); }
+.stext { color: var(--mute); font-size: .95rem; }
+.sbuy { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+.sprice { font: 700 1.35rem/1 var(--f-body); color: var(--bone); font-variant-numeric: tabular-nums; }
+.sbuy .btn { min-height: 40px; padding: 10px 16px; }
+.ssoon { font: 600 .8rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
+.store-note { margin-top: 18px; font-size: .95rem; max-width: 70ch; }

@@ -1,0 +1,147 @@
+{
+  "updated": "2026-11-20T09:25:49.357Z",
+  "games": {
+    "dustborn": {
+      "game": "dustborn",
+      "enabled": null,
+      "currency": "ZAR",
+      "firstPurchaseDouble": true,
+      "packs": [
+        {
+          "id": "pouch",
+          "name": "Pouch",
+          "scrip": 7,
+          "price": 34.99,
+          "img": "crate_steel"
+        },
+        {
+          "id": "satchel",
+          "name": "Satchel",
+          "scrip": 42,
+          "price": 179.99,
+          "img": "crate_blue"
+        },
+        {
+          "id": "crate",
+          "name": "Crate",
+          "scrip": 91,
+          "price": 349.99,
+          "img": "crate_red"
+        },
+        {
+          "id": "war_chest",
+          "name": "War Chest",
+          "scrip": 196,
+          "price": 699.99,
+          "img": "crate_treasure"
+        }
+      ],
+      "fetched": "2026-11-20T09:25:49.357Z"
+    },
+    "dark-alliance": {
+      "game": "dark-alliance",
+      "enabled": null,
+      "currency": "USD",
+      "firstPurchaseDouble": true,
+      "products": [
+        {
+          "id": "shards_s",
+          "name": "Pouch of Shards",
+          "kind": "shards",
+          "price": 2.99,
+          "text": "A small pouch of soul shards for a blessing or two at the Altar.",
+          "tag": null,
+          "art": "ixa",
+          "shards": 10,
+          "goldGrowsWithLevel": false,
+          "once": false
+        },
+        {
+          "id": "shards_m",
+          "name": "Sack of Shards",
+          "kind": "shards",
+          "price": 12.99,
+          "text": "Enough soul shards for a run of blessings or your first relic.",
+          "tag": "Popular",
+          "art": "ixa",
+          "shards": 60,
+          "goldGrowsWithLevel": false,
+          "once": false
+        },
+        {
+          "id": "shards_l",
+          "name": "Chest of Shards",
+          "kind": "shards",
+          "price": 25.99,
+          "text": "A chest of soul shards: relics, blessings and rebirths.",
+          "tag": null,
+          "art": "ixa",
+          "shards": 130,
+          "goldGrowsWithLevel": false,
+          "once": false
+        },
+        {
+          "id": "shards_xl",
+          "name": "Hoard of Shards",
+          "kind": "shards",
+          "price": 51.99,
+          "text": "A dragon’s hoard of soul shards for the boldest lords.",
+          "tag": "Best value",
+          "art": "ixa",
+          "shards": 280,
+          "goldGrowsWithLevel": false,
+          "once": false
+        },
+        {
+          "id": "gold_s",
+          "name": "Gold Purse",
+          "kind": "gold",
+          "price": 3.99,
+          "text": "A purse of gold that grows with your level.",
+          "tag": null,
+          "art": "tl_vau",
+          "shards": 0,
+          "goldGrowsWithLevel": true,
+          "once": false
+        },
+        {
+          "id": "gold_l",
+          "name": "Gold Vault",
+          "kind": "gold",
+          "price": 12.99,
+          "text": "A vault of gold that grows with your level.",
+          "tag": null,
+          "art": "tl_vau",
+          "shards": 0,
+          "goldGrowsWithLevel": true,
+          "once": false
+        },
+        {
+          "id": "starter",
+          "name": "Starter Pack",
+          "kind": "starter",
+          "price": 6.99,
+          "text": "30 soul shards, a purse of gold, and the exclusive Crowned Revenant portrait. One per lord.",
+          "tag": null,
+          "art": "pgr5",
+          "shards": 30,
+          "goldGrowsWithLevel": true,
+          "once": true
+        },
+        {
+          "id": "charter",
+          "name": "Lord's Charter",
+          "kind": "perk",
+          "price": 9.99,
+          "text": "Forever: +5 max Energy, your empire holds 48 hours of income instead of 24, and a gold crown beside your name in chat.",
+          "tag": null,
+          "art": "tl_rnk",
+          "shards": 0,
+          "goldGrowsWithLevel": false,
+          "once": true
+        }
+      ],
+      "fetched": "2026-11-20T09:25:49.357Z"
+    }
+  }
+}

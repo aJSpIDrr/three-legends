@@ -1,0 +1,38 @@
+name: Update store prices
+
+# Every 6 hours (and on demand from the Actions tab), read both games' public store lists
+# and save them to assets/store.json, so the website's store is right even while a game server sleeps.
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-store
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Read both game stores
+        run: node scripts/update-store.mjs
+      - name: Save if anything changed
+        run: |
+          if git diff --quiet -- assets/store.json; then
+            echo "Store unchanged."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/store.json
+            git commit -m "Update store prices from the games"
+            git push
+          fi
