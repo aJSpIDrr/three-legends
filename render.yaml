@@ -1,0 +1,25 @@
+# Render "Blueprint": tells Render how to host the Three Legends website.
+# Render reads this file when you connect this GitHub repository (New > Blueprint).
+# A Static Site is free and never sleeps. Every push to main (including the store-price job) updates it.
+services:
+  - type: web
+    name: three-legends
+    runtime: static
+    # Nothing to build: the pages are ready-made HTML.
+    buildCommand: echo "Nothing to build"
+    staticPublishPath: .
+    autoDeploy: true
+    headers:
+      # Pages and the saved store list are always checked for a newer copy.
+      - path: /*.html
+        name: Cache-Control
+        value: no-cache
+      - path: /
+        name: Cache-Control
+        value: no-cache
+      - path: /assets/store.json
+        name: Cache-Control
+        value: no-cache
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
