@@ -290,3 +290,9 @@ footer .fdiscord svg { width: 18px; height: 18px; color: #8b93ff; }
 .brand img { height: 48px; width: auto; }
 footer img { height: 44px; width: auto; }
 @media (max-width: 640px) { .brand img { height: 40px; } }
+
+/* ---------- Play buttons ---------- */
+.btn.play-btn svg { width: 18px; height: 18px; flex: none; }
+.btn.play-btn { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent); }
+.btn.play-btn.dark { background: var(--ink); color: var(--bone); border-color: var(--ink); }
+.playnote { font-size: .95rem; color: color-mix(in srgb, var(--bone) 78%, transparent); text-shadow: 0 1px 3px rgba(0,0,0,.8); }
