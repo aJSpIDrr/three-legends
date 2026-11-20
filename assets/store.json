@@ -1,42 +1,42 @@
 {
-  "updated": "2026-11-20T09:57:02Z",
+  "updated": "2026-11-20T10:08:51Z",
   "games": {
     "dustborn": {
       "game": "dustborn",
       "enabled": false,
-      "currency": "ZAR",
+      "currency": "USD",
       "firstPurchaseDouble": true,
       "packs": [
         {
           "id": "pouch",
           "name": "Pouch",
           "scrip": 7,
-          "price": 34.99,
+          "price": 1.99,
           "img": "crate_steel"
         },
         {
           "id": "satchel",
           "name": "Satchel",
           "scrip": 42,
-          "price": 179.99,
+          "price": 9.99,
           "img": "crate_blue"
         },
         {
           "id": "crate",
           "name": "Crate",
           "scrip": 91,
-          "price": 349.99,
+          "price": 19.99,
           "img": "crate_red"
         },
         {
           "id": "war_chest",
           "name": "War Chest",
           "scrip": 196,
-          "price": 699.99,
+          "price": 39.99,
           "img": "crate_treasure"
         }
       ],
-      "fetched": "2026-11-20T09:57:02Z"
+      "fetched": "2026-11-20T10:08:51Z"
     },
     "dark-alliance": {
       "game": "dark-alliance",
