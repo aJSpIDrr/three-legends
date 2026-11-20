@@ -55,6 +55,7 @@ def header(current):
       {link("index.html", "Home", "home", ' class="hide-sm"')}
       {link("dustborn.html", "Dustborn", "dustborn")}
       {link("dark-alliance.html", "Dark Alliance", "da")}
+      <a class="nav-soon" href="index.html#syndicate-city" title="Syndicate City is coming soon">Syndicate City <small>(Coming Soon)</small></a>
       {link("index.html#contact", "Contact", "contact", ' class="hide-sm"')}
       <a class="discord" href="{DISCORD}" target="_blank" rel="noopener" aria-label="Join our Discord" title="Join our Discord">{DISCORD_SVG}</a>
     </nav>
@@ -69,6 +70,7 @@ FOOTER = f'''<footer>
       <a href="index.html">Home</a>
       <a href="dustborn.html">Dustborn</a>
       <a href="dark-alliance.html">Dark Alliance</a>
+      <a href="index.html#syndicate-city">Syndicate City (Coming Soon)</a>
       <a href="{DISCORD}" target="_blank" rel="noopener" class="fdiscord">{DISCORD_SVG}<span>Discord</span></a>
     </nav>
     <span>© <span id="yr">2026</span> Three Legends</span>
@@ -149,7 +151,7 @@ home = head("Three Legends", "Three Legends: three brothers making browser RPGs.
             <span class="go">Explore Dark Alliance</span>
           </div>
         </a>
-        <div class="gcard soon" role="group" aria-label="Syndicate City, coming soon">
+        <div class="gcard soon" id="syndicate-city" role="group" aria-label="Syndicate City, coming soon">
           <div class="gbody">
             <p class="meta">Game 03 · In the works</p>
             <h3>Syndicate City <span class="soon-tag">(Coming Soon)</span></h3>
