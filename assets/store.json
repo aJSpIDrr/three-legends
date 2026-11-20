@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-20T09:25:49.357Z",
+  "updated": "2026-11-20T09:57:02Z",
   "games": {
     "dustborn": {
       "game": "dustborn",
-      "enabled": null,
+      "enabled": false,
       "currency": "ZAR",
       "firstPurchaseDouble": true,
       "packs": [
@@ -36,11 +36,11 @@
           "img": "crate_treasure"
         }
       ],
-      "fetched": "2026-11-20T09:25:49.357Z"
+      "fetched": "2026-11-20T09:57:02Z"
     },
     "dark-alliance": {
       "game": "dark-alliance",
-      "enabled": null,
+      "enabled": false,
       "currency": "USD",
       "firstPurchaseDouble": true,
       "products": [
@@ -85,7 +85,7 @@
           "name": "Hoard of Shards",
           "kind": "shards",
           "price": 51.99,
-          "text": "A dragon’s hoard of soul shards for the boldest lords.",
+          "text": "A dragon\u2019s hoard of soul shards for the boldest lords.",
           "tag": "Best value",
           "art": "ixa",
           "shards": 280,
@@ -141,7 +141,7 @@
           "once": true
         }
       ],
-      "fetched": "2026-11-20T09:25:49.357Z"
+      "fetched": "2026-11-20T09:57:02Z"
     }
   }
 }
