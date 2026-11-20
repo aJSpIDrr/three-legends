@@ -7,7 +7,7 @@ import os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DISCORD = "https://discord.gg/jhuXgywS7g"
 PLAY_DUSTBORN = "https://dustborn.onrender.com/"
-PLAY_DA = "https://dark-alliance-njj8.onrender.com/"
+PLAY_DA = "https://dark-alliance-play.onrender.com/"
 PLAY_SVG = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'
 
 def play_btn(url, label, cls="btn play-btn"):
