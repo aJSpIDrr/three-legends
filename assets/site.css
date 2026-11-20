@@ -317,3 +317,13 @@ body.da .sitem h3 { font-weight: 800; }
 .sbuy .btn { min-height: 40px; padding: 10px 16px; }
 .ssoon { font: 600 .8rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
 .store-note { margin-top: 18px; font-size: .95rem; max-width: 70ch; }
+
+/* ---------- Coming soon game card ---------- */
+.gcard.soon { grid-column: 1 / -1; min-height: 0;
+  background: radial-gradient(70% 160% at 90% 0%, rgba(110,60,170,.40), transparent 60%),
+              radial-gradient(50% 140% at 0% 100%, rgba(178,58,72,.28), transparent 60%), var(--ink-2); }
+.gcard.soon::after { display: none; }
+.gcard.soon .gbody { padding: 32px 28px; }
+.gcard.soon h3 { font-family: var(--f-display); font-weight: 700; color: var(--bone); font-size: clamp(2rem, 4.4vw, 3.2rem); letter-spacing: .02em; text-shadow: none; }
+.soon-tag { font-size: .48em; color: var(--gold); letter-spacing: .08em; white-space: nowrap; vertical-align: middle; }
+.gcard.soon p:not(.meta) { color: #cfc6d2; max-width: 56ch; }

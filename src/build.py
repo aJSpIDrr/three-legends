@@ -128,7 +128,7 @@ home = head("Three Legends", "Three Legends: three brothers making browser RPGs.
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">Our games</p>
-        <h2 id="games-title">Two worlds so far</h2>
+        <h2 id="games-title">Two worlds so far, a third on the way</h2>
       </div>
       <div class="games">
         <a class="gcard dust" href="dustborn.html">
@@ -149,6 +149,14 @@ home = head("Three Legends", "Three Legends: three brothers making browser RPGs.
             <span class="go">Explore Dark Alliance</span>
           </div>
         </a>
+        <div class="gcard soon" role="group" aria-label="Syndicate City, coming soon">
+          <div class="gbody">
+            <p class="meta">Game 03 · In the works</p>
+            <h3>Syndicate City <span class="soon-tag">(Coming Soon)</span></h3>
+            <p>The next Three Legends world is on its way. Join our Discord to hear about it first.</p>
+            <div class="btns">{discord_btn("Get notified on Discord", "btn ghost discord-btn")}</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
