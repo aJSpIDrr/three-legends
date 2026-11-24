@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T01:40:32.331Z",
+  "updated": "2026-11-24T01:42:42.555Z",
   "games": {
     "dustborn": {
       "game": "dustborn",
@@ -68,9 +68,17 @@
           "oncePerCrew": false,
           "price": 269.99,
           "img": "crate_ember"
+        },
+        {
+          "id": "citadel",
+          "name": "Blood Citadel Bundle",
+          "about": "The Warlord's own portrait and the Blood Citadel banner, plus 50 million caps and 1,000 scrip. One per crew.",
+          "oncePerCrew": true,
+          "price": 1499,
+          "img": "avatar_admin"
         }
       ],
-      "fetched": "2026-11-21T01:40:04.914Z"
+      "fetched": "2026-11-24T01:42:07.882Z"
     },
     "dark-alliance": {
       "game": "dark-alliance",
