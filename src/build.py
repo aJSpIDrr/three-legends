@@ -255,7 +255,7 @@ dust = head("Dustborn · Three Legends", "Dustborn: a post-apocalyptic online RP
 
   <section class="band store" id="store" aria-labelledby="db-store">
     <div class="wrap" data-store="dustborn">
-      <div class="head"><p class="eyebrow">Store</p><h2 id="db-store">Get scrip</h2><p class="muted">Scrip packs you can buy in the game. Optional: everything in Dustborn can also be earned by playing.</p><p class="store-status" role="status"></p></div>
+      <div class="head"><p class="eyebrow">Store</p><h2 id="db-store">Get scrip</h2><p class="muted">Scrip packs and supply deals you can buy in the game. Optional: everything in Dustborn can also be earned by playing.</p><p class="store-status" role="status"></p></div>
       <div class="store-grid"></div>
       <p class="store-note muted"></p>
     </div>
