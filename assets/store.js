@@ -10,10 +10,10 @@
   const GAMES = {
     dustborn: {
       live: 'https://dustborn-server.onrender.com/api/shop/catalog',
-      buy: 'https://dustborn.onrender.com/#/bazaar',
+      buy: 'https://dustborn.threelegendsgaming.com/#/bazaar',
       where: 'In the game: Bazaar → Get scrip.',
       bonus: 'Your first purchase is doubled, scrip packs and supply deals alike.',
-      img: (id) => `https://dustborn.onrender.com/assets/${id}.webp`,
+      img: (id) => `https://dustborn.threelegendsgaming.com/assets/${id}.webp`,
       groups: {
         packs: { title: 'Scrip packs', item: (p) => ({
           what: p.scrip ? `${p.scrip} scrip` : '',
@@ -26,10 +26,10 @@
     },
     'dark-alliance': {
       live: 'https://dark-alliance-njj8.onrender.com/api/store/catalog',
-      buy: 'https://dark-alliance-play.onrender.com/',
+      buy: 'https://darkalliance.threelegendsgaming.com/',
       where: 'In the game: Shop → Store.',
       bonus: 'Your first purchase gives double soul shards.',
-      img: (id) => `https://dark-alliance-play.onrender.com/art/${id}.webp`,
+      img: (id) => `https://darkalliance.threelegendsgaming.com/art/${id}.webp`,
       groups: {
         products: { title: null, item: (p) => ({
           what: p.kind === 'shards' ? `${p.shards} soul shards` : p.kind === 'gold' ? 'Gold that grows with your level'
