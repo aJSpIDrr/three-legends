@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T01:42:42.555Z",
+  "updated": "2026-11-25T10:44:07Z",
   "games": {
     "dustborn": {
       "game": "dustborn",
@@ -10,28 +10,28 @@
         {
           "id": "pouch",
           "name": "Pouch",
-          "scrip": 7,
+          "scrip": 9,
           "price": 34.99,
           "img": "crate_steel"
         },
         {
           "id": "satchel",
           "name": "Satchel",
-          "scrip": 42,
+          "scrip": 55,
           "price": 179.99,
           "img": "crate_blue"
         },
         {
           "id": "crate",
           "name": "Crate",
-          "scrip": 91,
+          "scrip": 118,
           "price": 349.99,
           "img": "crate_red"
         },
         {
           "id": "war_chest",
           "name": "War Chest",
-          "scrip": 196,
+          "scrip": 255,
           "price": 699.99,
           "img": "crate_treasure"
         }
@@ -78,7 +78,7 @@
           "img": "avatar_admin"
         }
       ],
-      "fetched": "2026-11-24T01:42:07.882Z"
+      "fetched": "2026-11-25T10:44:07Z"
     },
     "dark-alliance": {
       "game": "dark-alliance",
@@ -127,7 +127,7 @@
           "name": "Hoard of Shards",
           "kind": "shards",
           "price": 909.99,
-          "text": "A dragon’s hoard of soul shards for the boldest lords.",
+          "text": "A dragon\u2019s hoard of soul shards for the boldest lords.",
           "tag": "Best value",
           "art": "ixa",
           "shards": 280,
@@ -183,7 +183,7 @@
           "once": true
         }
       ],
-      "fetched": "2026-11-21T01:40:32.331Z"
+      "fetched": "2026-11-25T10:44:07Z"
     }
   }
 }

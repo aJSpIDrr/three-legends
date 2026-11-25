@@ -337,3 +337,9 @@ body.da .sitem h3 { font-weight: 800; }
   .top nav a.nav-soon { display: inline-flex; flex-direction: column; align-items: center; line-height: 1.15; }
   .top nav a.nav-soon small { font-size: .8em; letter-spacing: .02em; }
 }
+
+/* ---------- Store group headings (Scrip packs, Supply deals, ...) ---------- */
+.store-grid .sgroup { grid-column: 1 / -1; margin-top: 18px; padding-bottom: 6px; border-bottom: 1px solid var(--line);
+  font-family: var(--f-display); font-size: 1.6rem; font-weight: 400; letter-spacing: .03em; color: var(--accent); }
+.store-grid .sgroup:first-child { margin-top: 0; }
+body.da .store-grid .sgroup { font-weight: 800; }
