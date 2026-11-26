@@ -18,6 +18,7 @@ DISCORD_SVG = ('<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="tru
 FONTS = {
     "studio": "family=Cinzel:wght@500;700&family=Chivo:wght@400;600;700&family=Chivo+Mono:wght@400;500;600",
     "dustborn": "family=Staatliches&family=Barlow+Semi+Condensed:wght@400;600;700",
+    "sc": "family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700",
     "da": "family=Grenze+Gotisch:wght@500;700;800&family=Alegreya+Sans:wght@400;500;700;800",
 }
 
@@ -55,7 +56,7 @@ def header(current):
       {link("index.html", "Home", "home", ' class="hide-sm"')}
       {link("dustborn.html", "Dustborn", "dustborn")}
       {link("dark-alliance.html", "Dark Alliance", "da")}
-      <a class="nav-soon" href="index.html#syndicate-city" title="Syndicate City is coming soon">Syndicate City <small>(Coming Soon)</small></a>
+      <a class="nav-soon" href="syndicate-city.html" title="Syndicate City: sneak peek"{' aria-current="page"' if current == "sc" else ""}>Syndicate City <small>(Coming Soon)</small></a>
       {link("index.html#contact", "Contact", "contact", ' class="hide-sm"')}
       <a class="discord" href="{DISCORD}" target="_blank" rel="noopener" aria-label="Join our Discord" title="Join our Discord">{DISCORD_SVG}</a>
     </nav>
@@ -70,7 +71,7 @@ FOOTER = f'''<footer>
       <a href="index.html">Home</a>
       <a href="dustborn.html">Dustborn</a>
       <a href="dark-alliance.html">Dark Alliance</a>
-      <a href="index.html#syndicate-city">Syndicate City (Coming Soon)</a>
+      <a href="syndicate-city.html">Syndicate City (Coming Soon)</a>
       <a href="{DISCORD}" target="_blank" rel="noopener" class="fdiscord">{DISCORD_SVG}<span>Discord</span></a>
     </nav>
     <span>© <span id="yr">2026</span> Three Legends</span>
@@ -151,14 +152,15 @@ home = head("Three Legends", "Three Legends: three brothers making browser RPGs.
             <span class="go">Explore Dark Alliance</span>
           </div>
         </a>
-        <div class="gcard soon" id="syndicate-city" role="group" aria-label="Syndicate City, coming soon">
+        <a class="gcard soon sc" id="syndicate-city" href="syndicate-city.html">
+          <img src="assets/syndicate-city/sky_newyork.webp" alt="" loading="lazy">
           <div class="gbody">
-            <p class="meta">Game 03 · In the works</p>
+            <p class="meta">Game 03 · Crime-syndicate RPG · Coming soon</p>
             <h3>Syndicate City <span class="soon-tag">(Coming Soon)</span></h3>
-            <p>The next Three Legends world is on its way. Join our Discord to hear about it first.</p>
-            <div class="btns">{discord_btn("Get notified on Discord", "btn ghost discord-btn")}</div>
+            <p>Six crime families. One city. Pick your side and rise from street rookie to kingpin.</p>
+            <span class="go">See the sneak peek</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -499,7 +501,93 @@ da = head("Dark Alliance · Three Legends", "Dark Alliance: a dark fantasy onlin
 </main>
 ''' + FOOTER
 
-pages = {"index.html": home, "dustborn.html": dust, "dark-alliance.html": da}
+
+# =================================================================== SYNDICATE CITY (sneak peek)
+SC = "assets/syndicate-city/"
+crews = [
+    ("families", "The Five Families", "New York", "Old-school mafia. Pinstripe suits, speakeasies and loyalty above all. Strong on defence and cheaper crew."),
+    ("firm", "The Firm", "London", "East End gangsters with a talent for cleaning dirty money. Banking costs them almost nothing."),
+    ("syndicate", "The Syndicate", "Johannesburg", "The Jozi Gold Crew: gold and diamond smuggling and armoured cash-in-transit heists. Big job cash and tough on the road."),
+]
+crew_html = "".join(f'<article class="cls"><img src="{SC}crew_{i}.webp" alt="{n} crew" loading="lazy"><div><h3>{n}</h3><span class="boon">{c}</span><p>{d}</p></div></article>' for i, n, c, d in crews)
+crew_html += "".join(f'<article class="cls locked" aria-label="Faction not revealed yet"><img src="{SC}locked_{i}.webp" alt="" loading="lazy"><div><h3>Classified</h3><span class="boon">Revealed soon</span><p>Join the Discord to see who it is first.</p></div></article>' for i in ("yakuza", "triad", "sinaloa"))
+
+sc = head("Syndicate City (Coming Soon) · Three Legends", "Syndicate City: the next Three Legends game. A crime-syndicate RPG: pick one of six global crime families and rise from rookie to kingpin. Sneak peek.", "sc", ["studio", "sc"]) + header("sc") + f'''
+<main>
+  <section class="ghero" aria-labelledby="sc-title">
+    <img class="bg" src="{SC}hero.webp" srcset="{SC}hero-sm.webp 900w, {SC}hero.webp 1672w" sizes="100vw" alt="" fetchpriority="high">
+    <div class="wrap">
+      <p class="eyebrow">Game 03 · Sneak peek · Coming soon</p>
+      <h1 id="sc-title">Syndicate City</h1>
+      <p class="tagline">Six crime families. One city. Only one kingpin.</p>
+      <div class="facts"><span>Crime-syndicate RPG</span><span>6 factions, 10 ranks each</span><span>Phone &amp; PC browser</span><span>Status: coming soon</span></div>
+      <div class="btns">{discord_btn("Get sneak peeks on Discord")}<a class="btn ghost" href="#peek">Take a look</a></div>
+    </div>
+  </section>
+
+  <section class="band" id="peek" aria-labelledby="sc-about">
+    <div class="wrap split">
+      <div class="stack">
+        <p class="eyebrow">The game</p>
+        <h2 id="sc-about" class="sc-h2">Start on the street. End up running it.</h2>
+        <p class="lead">Syndicate City is our next online RPG. Pick one of six crime factions from around the world, work jobs across the city, build your family and fight rival bosses for turf.</p>
+        <p class="muted">Every rank changes your portrait, your frame and your perks, all the way from a nobody in a rainy alley to the boss of the whole city. This page is a small sneak peek. There's a lot more we're keeping under wraps for now.</p>
+      </div>
+      <button type="button" class="phone" style="border-radius:6px;cursor:zoom-in" data-full="{SC}city_jozi.webp" data-cap="Johannesburg at dusk"><img src="{SC}city_jozi.webp" alt="Johannesburg skyline at dusk with a mine headframe" style="aspect-ratio:2/1;object-fit:cover"></button>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="sc-crews">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Pick your side</p><h2 id="sc-crews">Six factions. Three revealed.</h2><p class="muted">Each faction has its own city, its own mentor, ten ranks to climb and a signature weapon nobody else can carry.</p></div>
+      <div class="classes sc-crews">{crew_html}</div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="sc-rise">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">The climb</p><h2 id="sc-rise">From Outsider to Godfather</h2><p class="muted">The Five Families' ladder: three of its ten ranks. Your portrait changes at every one.</p></div>
+      <ol class="sc-rise">
+        <li><img src="{SC}rank_01.webp" alt="Outsider portrait" loading="lazy"><b>Rank 1</b><span>Outsider</span></li>
+        <li><img src="{SC}rank_05.webp" alt="Soldier portrait" loading="lazy"><b>Rank 5</b><span>Soldier</span></li>
+        <li><img src="{SC}rank_10.webp" alt="Godfather portrait" loading="lazy"><b>Rank 10</b><span>Godfather</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="sc-feats">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">A first look</p><h2 id="sc-feats">What you'll be doing</h2></div>
+      {feats([
+        ("Work the city", "Run jobs across eight districts, master each one, then take down the district boss for gold and a one-off trophy."),
+        ("Build your family", "Recruit a crew, found a crime family with its own crest and go to war with rival families for turf."),
+        ("Your own HQ", "Grow your headquarters from a back room into a fortress, with a vault, a casino and a helipad on the roof."),
+        ("Forge your weapon", "Every faction has a signature weapon. Upgrade it from Mk I all the way to Mk X."),
+      ])}
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="sc-art">
+    <div class="wrap stack" style="gap:24px">
+      <div class="head" style="margin:0"><p class="eyebrow">Art</p><h2 id="sc-art">A few frames from the city</h2></div>
+      <div class="gal wide">
+        {gal_item(SC + "hero.webp", "The city", "The turf map")}
+        {gal_item(SC + "sky_london.webp", "London", "Home of The Firm")}
+      </div>
+      <div class="gal">
+        {gal_item(SC + "hq_vault.webp", "The Vault", "HQ")}
+        {gal_item(SC + "hq_casino.webp", "The Casino", "HQ")}
+        {gal_item(SC + "hq_helipad.webp", "The Helipad", "HQ")}
+        {gal_item(SC + "weapon_tommy.webp", "Chicago Typewriter", "Mk X")}
+      </div>
+    </div>
+  </section>
+
+  <section class="strip"><div class="wrap"><p>The city is almost ready. Be the first in.</p><div class="btns">{discord_btn("Get sneak peeks on Discord")}</div></div></section>
+</main>
+''' + FOOTER
+
+pages = {"index.html": home, "dustborn.html": dust, "dark-alliance.html": da, "syndicate-city.html": sc}
 for name, html in pages.items():
     open(os.path.join(ROOT, name), "w").write(html)
 
