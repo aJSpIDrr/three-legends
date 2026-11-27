@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T07:49:20.170Z",
+  "updated": "2026-11-27T19:23:39.106Z",
   "games": {
     "dustborn": {
       "game": "dustborn",
@@ -11,28 +11,28 @@
         {
           "id": "pouch",
           "name": "Pouch",
-          "scrip": 9,
+          "scrip": 14,
           "price": 1.99,
           "img": "crate_steel"
         },
         {
           "id": "satchel",
           "name": "Satchel",
-          "scrip": 55,
+          "scrip": 83,
           "price": 9.99,
           "img": "crate_blue"
         },
         {
           "id": "crate",
           "name": "Crate",
-          "scrip": 118,
+          "scrip": 177,
           "price": 19.99,
           "img": "crate_red"
         },
         {
           "id": "war_chest",
           "name": "War Chest",
-          "scrip": 255,
+          "scrip": 383,
           "price": 39.99,
           "img": "crate_treasure"
         }
@@ -41,7 +41,7 @@
         {
           "id": "starter",
           "name": "Starter Kit",
-          "about": "One per crew. 30 scrip, 3 extra crew members and a full refill.",
+          "about": "One per crew. 45 scrip, 3 extra crew members and a full refill.",
           "oncePerCrew": true,
           "price": 2.99,
           "img": "kit_backpack"
@@ -73,13 +73,13 @@
         {
           "id": "citadel",
           "name": "Blood Citadel Bundle",
-          "about": "The Warlord's own portrait and the Blood Citadel banner, plus 50 million caps and 1,000 scrip. One per crew.",
+          "about": "The Warlord's own portrait and the Blood Citadel banner, plus 5 billion caps and 2,000 scrip. One per crew.",
           "oncePerCrew": true,
           "price": 84.99,
           "img": "avatar_admin"
         }
       ],
-      "fetched": "2026-11-26T07:49:19.957Z"
+      "fetched": "2026-11-27T19:23:38.898Z"
     },
     "dark-alliance": {
       "game": "dark-alliance",
