@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds the Three Legends site: index.html, dustborn.html, dark-alliance.html.
+"""Builds the ThreeLegends Gaming site: index.html, dustborn.html, dark-alliance.html.
 Run from the website folder:  python3 src/build.py
 Also writes src/artifact-index.html (the home page without its <html>/<head> wrapper) for the online preview."""
 import os, re
@@ -51,11 +51,11 @@ def header(current):
         return f'<a href="{href}"{cur}{extra}>{label}</a>'
     return f'''<header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Three Legends home"><img src="assets/three-legends-emblem-sm.webp" width="360" height="257" alt="Three Legends"></a>
+    <a class="brand" href="index.html" aria-label="ThreeLegends Gaming home"><img src="assets/three-legends-emblem-sm.webp" width="360" height="257" alt="ThreeLegends Gaming"></a>
     <nav aria-label="Main">
       {link("index.html", "Home", "home", ' class="hide-sm"')}
-      {link("dustborn.html", "Dustborn", "dustborn")}
       {link("dark-alliance.html", "Dark Alliance", "da")}
+      {link("dustborn.html", "Dustborn", "dustborn")}
       <a class="nav-soon" href="syndicate-city.html" title="Syndicate City: sneak peek"{' aria-current="page"' if current == "sc" else ""}>Syndicate City <small>(Coming Soon)</small></a>
       {link("index.html#contact", "Contact", "contact", ' class="hide-sm"')}
       <a class="discord" href="{DISCORD}" target="_blank" rel="noopener" aria-label="Join our Discord" title="Join our Discord">{DISCORD_SVG}</a>
@@ -66,15 +66,15 @@ def header(current):
 
 FOOTER = f'''<footer>
   <div class="wrap">
-    <a href="index.html"><img src="assets/three-legends-emblem-sm.webp" width="360" height="257" alt="Three Legends"></a>
+    <a href="index.html"><img src="assets/three-legends-emblem-sm.webp" width="360" height="257" alt="ThreeLegends Gaming"></a>
     <nav aria-label="Footer">
       <a href="index.html">Home</a>
-      <a href="dustborn.html">Dustborn</a>
       <a href="dark-alliance.html">Dark Alliance</a>
+      <a href="dustborn.html">Dustborn</a>
       <a href="syndicate-city.html">Syndicate City (Coming Soon)</a>
       <a href="{DISCORD}" target="_blank" rel="noopener" class="fdiscord">{DISCORD_SVG}<span>Discord</span></a>
     </nav>
-    <span>© <span id="yr">2026</span> Three Legends</span>
+    <span>© <span id="yr">2026</span> ThreeLegends Gaming</span>
   </div>
 </footer>
 <script src="assets/site.js"></script>
@@ -99,12 +99,12 @@ def feats(items):
     return '<ul class="feats">' + "".join(f"<li><b>{t}</b><p>{d}</p></li>" for t, d in items) + "</ul>"
 
 # =================================================================== HOME
-home = head("Three Legends", "Three Legends: three brothers making browser RPGs. Home of Dustborn and Dark Alliance.", "studio", ["studio", "dustborn", "da"]) + header("home") + f'''
+home = head("ThreeLegends Gaming", "ThreeLegends Gaming: three brothers making browser RPGs. Home of Dark Alliance and Dustborn.", "studio", ["studio", "dustborn", "da"]) + header("home") + f'''
 <main id="home">
-  <section class="crest" aria-label="Three Legends">
-    <img class="banner" src="assets/three-legends-banner.webp" srcset="assets/three-legends-banner-sm.webp 1000w, assets/three-legends-banner.webp 1672w" sizes="(max-width: 1672px) 100vw, 1672px" width="1672" height="941" alt="Three Legends: Three brothers. One legendary journey. An archer, a knight and a wizard look out over a castle under a blood-red sky, with a dragon overhead. Play, explore, conquer.">
+  <section class="crest" aria-label="ThreeLegends Gaming">
+    <img class="banner" src="assets/three-legends-banner.webp" srcset="assets/three-legends-banner-sm.webp 1000w, assets/three-legends-banner.webp 1672w" sizes="(max-width: 1672px) 100vw, 1672px" width="1672" height="941" alt="ThreeLegends Gaming: Three brothers. One legendary journey. An archer, a knight and a wizard look out over a castle under a blood-red sky, with a dragon overhead. Play, explore, conquer.">
     <div class="wrap">
-      <p class="lead">We are Three Legends, a small independent studio run by three brothers. We make online RPGs that you play in your browser, on your phone or your PC. Two worlds so far, with more on the way.</p>
+      <p class="lead">We are ThreeLegends Gaming, a small independent studio run by three brothers. We make online RPGs that you play in your browser, on your phone or your PC. Two worlds so far, with more on the way.</p>
       <div class="btns" style="justify-content:center">
         <a class="btn" href="#games">See our games</a>
         {discord_btn(cls="btn ghost discord-btn")}
@@ -134,22 +134,22 @@ home = head("Three Legends", "Three Legends: three brothers making browser RPGs.
         <h2 id="games-title">Two worlds so far, a third on the way</h2>
       </div>
       <div class="games">
-        <a class="gcard dust" href="dustborn.html">
-          <img src="assets/dustborn/hero.webp" alt="" loading="lazy">
-          <div class="gbody">
-            <p class="meta">Game 01 · Post-apocalyptic RPG · Playtest</p>
-            <h3>Dustborn</h3>
-            <p>Scavenge by day. Raid by night. Trust nobody. Lead a crew across fourteen regions of wasteland, from the Outskirts to the Citadel of Ash.</p>
-            <span class="go">Explore Dustborn</span>
-          </div>
-        </a>
         <a class="gcard dark" href="dark-alliance.html">
           <img src="assets/dark-alliance/hero.webp" alt="" loading="lazy" style="object-position:center top">
           <div class="gbody">
-            <p class="meta">Game 02 · Dark fantasy RPG · In development</p>
+            <p class="meta">Game 01 · Dark fantasy RPG · In development</p>
             <h3>Dark Alliance</h3>
             <p>Master missions. Break your rivals. Raise an empire from the ash. Rise from Outcast to Legend across eight blood-soaked chapters.</p>
             <span class="go">Explore Dark Alliance</span>
+          </div>
+        </a>
+        <a class="gcard dust" href="dustborn.html">
+          <img src="assets/dustborn/hero.webp" alt="" loading="lazy">
+          <div class="gbody">
+            <p class="meta">Game 02 · Post-apocalyptic RPG · Playtest</p>
+            <h3>Dustborn</h3>
+            <p>Scavenge by day. Raid by night. Trust nobody. Lead a crew across fourteen regions of wasteland, from the Outskirts to the Citadel of Ash.</p>
+            <span class="go">Explore Dustborn</span>
           </div>
         </a>
         <a class="gcard soon sc" id="syndicate-city" href="syndicate-city.html">
@@ -168,7 +168,7 @@ home = head("Three Legends", "Three Legends: three brothers making browser RPGs.
   <section class="band" aria-labelledby="pillars-title">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">In every Three Legends game</p>
+        <p class="eyebrow">In every ThreeLegends Gaming game</p>
         <h2 id="pillars-title">Play. Explore. Conquer.</h2>
       </div>
       <ul class="pillars">
@@ -213,12 +213,12 @@ regions = [
 ]
 route_db = "".join(f'<li><span class="lv">Lv<b>{lv}</b></span><img src="assets/dustborn/boss_{k}.webp" alt="{b}" loading="lazy"><span class="nm">{n}<small>Boss: {b}</small></span></li>' for lv, n, b, k in regions)
 
-dust = head("Dustborn · Three Legends", "Dustborn: a post-apocalyptic online RPG by Three Legends. Scavenge by day. Raid by night. Trust nobody.", "dustborn", ["studio", "dustborn"]) + header("dustborn") + f'''
+dust = head("Dustborn · ThreeLegends Gaming", "Dustborn: a post-apocalyptic online RPG by ThreeLegends Gaming. Scavenge by day. Raid by night. Trust nobody.", "dustborn", ["studio", "dustborn"]) + header("dustborn") + f'''
 <main>
   <section class="ghero" aria-labelledby="db-title">
     <img class="bg" src="assets/dustborn/hero.webp" alt="" fetchpriority="high">
     <div class="wrap">
-      <p class="eyebrow">Game 01 · A Three Legends game</p>
+      <p class="eyebrow">Game 02 · A ThreeLegends Gaming game</p>
       <h1 id="db-title">Dustborn</h1>
       <p class="tagline">Scavenge by day. Raid by night. Trust nobody.</p>
       <div class="facts"><span>Post-apocalyptic RPG</span><span>Online multiplayer</span><span>Phone &amp; PC browser</span><span>Status: playtest</span></div>
@@ -363,12 +363,12 @@ classes = [
 ]
 cls_html = "".join(f'<article class="cls"><img src="assets/dark-alliance/class_{i}.webp" alt="{n}" loading="lazy"><div><h3>{n}</h3><span class="boon">{b}</span><p>{d}</p></div></article>' for i, (n, b, d) in enumerate(classes))
 
-da = head("Dark Alliance · Three Legends", "Dark Alliance: a dark fantasy online RPG by Three Legends. Master missions. Break your rivals. Raise an empire from the ash.", "da", ["studio", "da"]) + header("da") + f'''
+da = head("Dark Alliance · ThreeLegends Gaming", "Dark Alliance: a dark fantasy online RPG by ThreeLegends Gaming. Master missions. Break your rivals. Raise an empire from the ash.", "da", ["studio", "da"]) + header("da") + f'''
 <main>
   <section class="ghero" aria-labelledby="da-title">
     <img class="bg" src="assets/dark-alliance/hero.webp" alt="" fetchpriority="high">
     <div class="wrap">
-      <p class="eyebrow">Game 02 · A Three Legends game</p>
+      <p class="eyebrow">Game 01 · A ThreeLegends Gaming game</p>
       <h1 id="da-title">Dark Alliance</h1>
       <p class="tagline">Master missions. Break your rivals. Raise an empire from the ash.</p>
       <div class="facts"><span>Dark fantasy RPG</span><span>Clans, sieges &amp; world bosses</span><span>Phone &amp; PC browser</span><span>Status: in development</span></div>
@@ -512,7 +512,7 @@ crews = [
 crew_html = "".join(f'<article class="cls"><img src="{SC}crew_{i}.webp" alt="{n} crew" loading="lazy"><div><h3>{n}</h3><span class="boon">{c}</span><p>{d}</p></div></article>' for i, n, c, d in crews)
 crew_html += "".join(f'<article class="cls locked" aria-label="Faction not revealed yet"><img src="{SC}locked_{i}.webp" alt="" loading="lazy"><div><h3>Classified</h3><span class="boon">Revealed soon</span><p>Join the Discord to see who it is first.</p></div></article>' for i in ("yakuza", "triad", "sinaloa"))
 
-sc = head("Syndicate City (Coming Soon) · Three Legends", "Syndicate City: the next Three Legends game. A crime-syndicate RPG: pick one of six global crime families and rise from rookie to kingpin. Sneak peek.", "sc", ["studio", "sc"]) + header("sc") + f'''
+sc = head("Syndicate City (Coming Soon) · ThreeLegends Gaming", "Syndicate City: the next ThreeLegends Gaming game. A crime-syndicate RPG: pick one of six global crime families and rise from rookie to kingpin. Sneak peek.", "sc", ["studio", "sc"]) + header("sc") + f'''
 <main>
   <section class="ghero" aria-labelledby="sc-title">
     <img class="bg" src="{SC}hero.webp" srcset="{SC}hero-sm.webp 900w, {SC}hero.webp 1672w" sizes="100vw" alt="" fetchpriority="high">
