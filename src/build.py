@@ -98,6 +98,24 @@ def shot(src, title, text):
 def feats(items):
     return '<ul class="feats">' + "".join(f"<li><b>{t}</b><p>{d}</p></li>" for t, d in items) + "</ul>"
 
+
+def rewards(which=("da", "db")):
+    games = {
+        "da": ("Dark Alliance", "1,000,000 gold · 100 soul shards · 2 free Full Restorations at the Altar", "https://darkalliance.threelegendsgaming.com/?discord-reward"),
+        "db": ("Dustborn", "Starter Kit · 1,000,000 caps · 100 scrip · 2 energy refills + 2 ammo refills", "https://dustborn.threelegendsgaming.com/#/discord-reward"),
+    }
+    cards = "".join(f'<div class="rw-game"><h3>{n}</h3><p>{r}</p><a class="btn ghost" href="{u}" target="_blank" rel="noopener">Claim in {n}</a></div>' for n, r, u in (games[k] for k in which))
+    return f'''
+  <section class="band rewards" id="discord-rewards" aria-labelledby="rw-title">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Free welcome gift</p><h2 id="rw-title">Join our Discord, get free rewards</h2><p class="muted">Join the ThreeLegends Gaming Discord, then connect it inside the game to claim a one-time welcome gift. The same Discord account can claim in both games.</p></div>
+      <div class="rw-games">{cards}</div>
+      <ol class="rw-steps"><li>Join our Discord.</li><li>In the game, tap <b>Connect Discord</b> and claim. Already in the Discord? You can claim too.</li></ol>
+      <div class="btns">{discord_btn("Join the Discord")}</div>
+    </div>
+  </section>
+'''
+
 # =================================================================== HOME
 home = head("ThreeLegends Gaming", "ThreeLegends Gaming: three brothers making browser RPGs. Home of Dark Alliance and Dustborn.", "studio", ["studio", "dustborn", "da"]) + header("home") + f'''
 <main id="home">
@@ -165,6 +183,7 @@ home = head("ThreeLegends Gaming", "ThreeLegends Gaming: three brothers making b
     </div>
   </section>
 
+''' + rewards() + f'''
   <section class="band" aria-labelledby="pillars-title">
     <div class="wrap">
       <div class="head">
@@ -255,6 +274,7 @@ dust = head("Dustborn · ThreeLegends Gaming", "Dustborn: a post-apocalyptic onl
     </div>
   </section>
 
+''' + rewards(("db",)) + f'''
   <section class="band store" id="store" aria-labelledby="db-store">
     <div class="wrap" data-store="dustborn">
       <div class="head"><p class="eyebrow">Store</p><h2 id="db-store">Get scrip</h2><p class="muted">Scrip packs and supply deals you can buy in the game. Optional: everything in Dustborn can also be earned by playing.</p><p class="store-status" role="status"></p></div>
@@ -415,6 +435,7 @@ da = head("Dark Alliance · ThreeLegends Gaming", "Dark Alliance: a dark fantasy
     </div>
   </section>
 
+''' + rewards(("da",)) + f'''
   <section class="band store" id="store" aria-labelledby="da-store">
     <div class="wrap" data-store="dark-alliance">
       <div class="head"><p class="eyebrow">Store</p><h2 id="da-store">The Store</h2><p class="muted">Soul shards, gold and perks you can buy in the game. Optional: you can play the whole game for free.</p><p class="store-status" role="status"></p></div>
